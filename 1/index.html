@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <form id="switch">
+        <button type="submit" id="switch__calc">Калькулятор дат</button>
+        <button type="submit" id="switch__time">Таймер</button>
+    </form>
     <form id="datecalc">
         <h3>Калькулятор дат: </h3>
         <label>
@@ -23,6 +27,17 @@
         <button type="submit">Рассчитать промежуток</button>
         <p id="datecalc__result"></p>
     </form>
+    <form id="timer">
+        <h3>Таймер</h3>
+        <label>
+            <strong>Установите время</strong>
+            <input type="number" name="allTime"> (количество секунд)
+        </label>
+        <p id="timer__result"></p>
+        <button type="submit" id="timer__start">Старт</button>
+        <button type="submit" id="timer__stop">Стоп</button>
+    </form>
+
 </body>
 
 </html>
