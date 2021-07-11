@@ -5,6 +5,7 @@ const timerStop = document.getElementById("timer__stop");
 const time = document.getElementsByName("allTime");
 const timeResult = document.getElementById("timer__result");
 let clickGo = 0;
+var audio = new Audio("audio/Sound.mp3");
 
 timerStart.addEventListener('click', timerGo);
 
@@ -44,10 +45,12 @@ function timerGo(event) {
 function countdown(number, cb) {
     timerStop.addEventListener('click', timerStp);
     let x = true;
+    let timerId = setInterval(dwn, 1000);
 
     function dwn() {
         if (number < 1 || x == false) {
-            clearInterval();
+            clearInterval(timerId);
+            audio.play();
         } else {
             number--;
             cb(number);
@@ -60,6 +63,4 @@ function countdown(number, cb) {
     }
 
     cb(number);
-    setInterval(dwn, 1000);
-
 }
