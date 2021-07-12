@@ -1,0 +1,5 @@
+import "./datecalc.js"
+import "./timer.js"
+import "./switch.js"
+import "../style/normalize.css"
+import "../style/style.css"
